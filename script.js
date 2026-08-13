@@ -15,6 +15,23 @@ mainNav.querySelectorAll('a').forEach(link => {
   });
 });
 
+// ---------- Visitor Counter ----------
+
+const visitorDigits = document.getElementById('visitor-counter-digits');
+
+if (visitorDigits) {
+  fetch('/api/visits', { method: 'POST' })
+    .then(res => res.json())
+    .then(data => {
+      if (typeof data.count === 'number') {
+        visitorDigits.textContent = data.count.toLocaleString('en-IE');
+      }
+    })
+    .catch(() => {
+      visitorDigits.textContent = '—';
+    });
+}
+
 // ---------- Guestbook ----------
 
 const guestbookForm = document.getElementById('guestbook-form');

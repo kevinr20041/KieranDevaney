@@ -288,6 +288,44 @@ a { color: inherit; text-decoration: none; }
 
 .guestbook-inner { max-width: 760px; }
 
+.guestbook-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.visitor-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 0;
+  padding: 8px 16px;
+  background: var(--ink);
+  border-radius: var(--radius);
+  border: 1px solid rgba(201, 169, 98, 0.35);
+}
+
+.visitor-counter-digits {
+  font-family: 'Courier New', ui-monospace, monospace;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--brass-light);
+  background: var(--ink-deep);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.visitor-counter-label {
+  font-family: var(--serif-body);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--parchment-dark);
+}
+
 .guestbook-form {
   display: grid;
   gap: 18px;

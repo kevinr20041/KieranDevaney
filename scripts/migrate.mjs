@@ -11,4 +11,16 @@ await sql`
   )
 `;
 
-console.log('Migration complete: guestbook_entries table ready.');
+await sql`
+  CREATE TABLE IF NOT EXISTS site_counters (
+    key TEXT PRIMARY KEY,
+    value BIGINT NOT NULL DEFAULT 0
+  )
+`;
+
+await sql`
+  INSERT INTO site_counters (key, value) VALUES ('total_visits', 0)
+  ON CONFLICT (key) DO NOTHING
+`;
+
+console.log('Migration complete: guestbook_entries + site_counters tables ready.');
