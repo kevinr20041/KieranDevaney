@@ -278,6 +278,125 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
 }
 
+/* ---------- Guestbook ---------- */
+
+.guestbook {
+  background: var(--parchment-dark);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.guestbook-inner { max-width: 760px; }
+
+.guestbook-form {
+  display: grid;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid rgba(176, 141, 79, 0.3);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin: 32px 0 44px;
+}
+
+.guestbook-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.guestbook-field label {
+  font-family: var(--serif-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.guestbook-field input,
+.guestbook-field textarea {
+  font-family: var(--serif-body);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--parchment-dark);
+  border-radius: var(--radius);
+  background: var(--parchment);
+  color: var(--text-dark);
+  resize: vertical;
+}
+
+.guestbook-field input:focus,
+.guestbook-field textarea:focus {
+  outline: none;
+  border-color: var(--brass);
+}
+
+.guestbook-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.guestbook-form .btn { justify-self: start; }
+
+.guestbook-status {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted);
+  min-height: 1.2em;
+}
+
+.guestbook-status.is-error { color: var(--oxblood); }
+
+.guestbook-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.guestbook-loading,
+.guestbook-empty {
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.guestbook-entry {
+  background: #fff;
+  border-left: 3px solid var(--brass-light);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+}
+
+.guestbook-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.guestbook-entry-name {
+  font-family: var(--serif-display);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.guestbook-entry-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.guestbook-entry-message {
+  margin: 0;
+  color: var(--text-dark);
+  word-wrap: break-word;
+}
+
 /* ---------- Sections (shared) ---------- */
 
 .section {

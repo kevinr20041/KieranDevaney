@@ -1,0 +1,8 @@
+{
+  "name": "kieran-devaney-site",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.1.0"
+  }
+}
